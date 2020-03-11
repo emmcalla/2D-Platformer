@@ -4,13 +4,13 @@
 [ext_resource path="res://assets/platformer-pack-redux-360-assets/PNG/Enemies/mouse.png" type="Texture" id=2]
 
 [sub_resource type="OccluderPolygon2D" id=1]
-polygon = PoolVector2Array( -0.0765228, 46.5714, -22.833, 46.189, -38.1315, 42.7468, -47.8843, 35.48, -52.8564, 27.0658, -54.5774, 18.2692, -54.0037, 5.07425, -48.6493, -13.0927, -35.8368, -32.0246, -20.9207, -43.116, -7.53454, -47.5144, 0.114708, -47.8968, 10.25, -46.9407, 21.5326, -42.3511, 32.624, -34.1282, 44.8628, -20.5507, 52.8945, -2.00131, 54.6156, 11.3849, 54.8069, 19.2254, 52.7033, 27.4483, 46.0102, 37.5836, 35.6837, 43.3205, 22.2975, 46.3802 )
+polygon = PoolVector2Array( 0.0551569, 42.9856, -22.0528, 44.2861, -38.1315, 42.7468, -47.8843, 35.48, -52.8564, 27.0658, -46.7616, 22.1781, -41.2347, 22.8284, -35.3826, 11.4493, -45.1361, 2.34601, -33.1068, -18.7866, -9.04811, -9.35819, -9.04811, -3.50609, 11.7594, 2.99625, 26.3896, 12.0995, 37.1185, 25.1042, 42.9706, 17.6265, 47.1971, 4.62183, 54.6156, 11.3849, 54.8069, 19.2254, 52.7033, 27.4483, 46.0102, 37.5836, 35.6837, 43.3205, 21.838, 44.9363 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 40, 34 )
+extents = Vector2( 80.7201, 42.5389 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 40, 10.5328 )
+extents = Vector2( 77.3064, 10.5328 )
 
 [node name="Enemy" type="KinematicBody2D"]
 collision_layer = 2
@@ -23,10 +23,11 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite"]
+position = Vector2( -1.47017, 20.5826 )
 occluder = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -34 )
+position = Vector2( 4.38911, -29.6109 )
 shape = SubResource( 2 )
 
 [node name="StompArea2D" type="Area2D" parent="."]
@@ -34,11 +35,12 @@ position = Vector2( 0, -66.4549 )
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompArea2D"]
-position = Vector2( 0, -4.93669 )
+position = Vector2( 0.487701, 18.4717 )
 shape = SubResource( 3 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-position = Vector2( 0, -33 )
+position = Vector2( 7.31512, -21.7835 )
+scale = Vector2( 1.58521, 1 )
 rect = Rect2( -50, -33, 100, 66 )
 process_parent = true
 physics_process_parent = true
